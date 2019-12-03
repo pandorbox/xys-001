@@ -1,0 +1,19 @@
+
+.border-radius(@rad:50%){
+    -webkit-border-radius: @rad;
+    border-radius: @rad;
+    border-radius: @rad
+}
+
+.transition(@name:all,@time:.3s){
+    -webkit-transition: @name @time ease;
+    -moz-transition: @name @time ease;
+    transition: @name @time ease;
+}
+.ellipsis(@line:2){
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line;
+    -webkit-box-orient: vertical;
+}
