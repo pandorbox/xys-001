@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="author" content="CL" />
+    <meta name="author" content="QJK" />
     <title>首页</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="https://cdn.staticfile.org/Swiper/4.5.0/css/swiper.min.css" />
@@ -30,22 +30,27 @@
         <li class="active"><a href="#">首页</a></li>
         <li><a href="#">案例展示</a></li>
         <li><a href="#">设计团队</a></li>
-        <!-- <li><a href="#">热门楼盘</a></li>
+        <li><a href="#">热门楼盘</a></li>
         <li><a href="#">新闻动态</a></li>
         <li><a href="#">品牌简介</a></li>
-        <li><a href="#">联系我们</a></li> -->
+        <li><a href="#">联系我们</a></li>
       </ul>
       <div class="search">
         <input class="input" type="text" placeholder="输入关键词搜索" />
         <a href="" class="icon"><img src="images/search.png" alt=""/></a>
       </div>
+      <div class="m-icon"></div>
     </div>
     <!-- banner -->
-    <!-- <div class="swiper-container  banner container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
+    <div class="home-swiper container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper ">
+          <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
+          <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
+          <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
+        </div>
       </div>
-    </div> -->
+    </div>
     <!-- /banner -->
     <!-- apply -->
     <div class="apply container">
@@ -54,8 +59,8 @@
         <div class="subtit">一 对 一 私 人 定 制</div>
       </div>
       <div class="input">
-        <input type="text" placeholder="您的称呼" /> <input type="text" placeholder="联系电话" />
-        <input type="text" placeholder="小区名称" />
+        <input type="text" class="one" placeholder="您的称呼" /> <input type="text" class="two" placeholder="联系电话" />
+        <input type="text" class="thr" placeholder="小区名称" />
       </div>
       <div class="btn">立即申请</div>
     </div>
@@ -69,8 +74,8 @@
           <p class="tit-zn">案例展示</p>
         </div>
         <ul class="case-nav clear">
-          <li class="active"><a href="#">地中海风格</a></li>
-          <li><a href="#">北欧风格</a></li>
+          <li><a href="#">地中海风格</a></li>
+          <li class="active"><a href="#">北欧风格</a></li>
           <li><a href="#">简欧风格</a></li>
           <li><a href="#">中式风格</a></li>
           <li><a href="#">美式风格</a></li>
@@ -79,17 +84,17 @@
       </div>
       <!-- 案例详情 -->
       <div class="detail">
-        <img src="images/case.png" alt="" class="detail-img" />
+        <img src="images/casdetail.png" alt="" class="detail-img" />
         <div class="stack">
           <div class="stack-one">
             <p class="tit">花园小区</p>
             <div class="subtit">
-              <p>设计师： 唐老鸭</p>
-              <p>面积： 100m²</p>
-              <p>风格： 北欧风格</p>
+              <p>设计师：唐老鸭</p>
+              <p>面积：100m²</p>
+              <p>风格：北欧风格</p>
             </div>
             <p class="content">
-              北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧北欧风格北欧风格北欧风格北欧风格北欧风北欧风格北欧风格北欧风格北欧风格北欧风风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格北欧风格
+              北欧风格是指欧洲北部国家挪威、丹麦、瑞典、芬兰及冰岛等国的艺术设计风格（主要指室内设计以及工业产品设计），北欧风格起源于斯堪的那维亚地区的设计风格，因此也被称为“斯堪的纳维亚风格”。具有简约、自然、人性化的特点。
             </p>
           </div>
           <div class="stack-two"></div>
@@ -100,9 +105,9 @@
         </div>
       </div>
       <!-- 案例列表 -->
-      <div class="case-list ractive">
+      <div class="case-list">
         <div class="case-list-one "><img class="case-list-img" src="images/case.png" alt="" /></div>
-        <div class="case-list-one active" act><img class="case-list-img" src="images/case.png" alt="" /></div>
+        <div class="case-list-one active"><img class="case-list-img" src="images/case.png" alt="" /></div>
         <div class="case-list-one"><img class="case-list-img" src="images/case.png" alt="" /></div>
         <div class="case-list-one"><img class="case-list-img" src="images/case.png" alt="" /></div>
         <div class="case-list-one"><img class="case-list-img" src="images/case.png" alt="" /></div>
@@ -126,7 +131,7 @@
       <!-- 设计师列表 -->
       <div class="design-list clear">
         <div class="design-list-img  ">
-          <div class="img-box "><img src="images/design.png" alt="" /></div>
+          <div class="img-box "><img src="images/design-one.png" alt="" /></div>
           <div class="text">
             <div class="tit">
               <p class="name">唐老鸭</p>
@@ -135,12 +140,12 @@
             <p class="year">工作：6年</p>
             <div class="lines">
               <p class="tit">擅长：</p>
-              <div class="content">空间合理利用，各种风格空间合理利用，理利用各种风格</div>
+              <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
             </div>
           </div>
         </div>
         <div class="design-list-img active ">
-          <div class="img-box "><img src="images/design.png" alt="" /></div>
+          <div class="img-box "><img src="images/design-two.png" alt="" /></div>
           <div class="text">
             <div class="tit">
               <p class="name">唐老鸭</p>
@@ -154,7 +159,7 @@
           </div>
         </div>
         <div class="design-list-img  ">
-          <div class="img-box "><img src="images/design.png" alt="" /></div>
+          <div class="img-box "><img src="images/design-thr.png" alt="" /></div>
           <div class="text">
             <div class="tit">
               <p class="name">唐老鸭</p>
@@ -163,12 +168,12 @@
             <p>工作：6年</p>
             <div class="lines">
               <p class="tit">擅长：</p>
-              <p class="content">空间合理利用，各种风格空间合理利用，利用各种风格空间合理利用各种风格</p>
+              <p class="content">空间合理利用，各种风格空间合理利用，用各种风格</p>
             </div>
           </div>
         </div>
         <div class="design-list-img">
-          <div class="img-box "><img src="images/design.png" alt="" /></div>
+          <div class="img-box "><img src="images/design-fou.png" alt="" /></div>
           <div class="text">
             <div class="tit">
               <p class="name">唐老鸭</p>
@@ -177,7 +182,7 @@
             <p>工作：6年</p>
             <div class="lines">
               <p class="tit">擅长：</p>
-              <p class="content">空间合理利用，各种风种风格空间合理利用各种风格</p>
+              <p class="content">空间合理利用，各种风格空间合理利用，用各种风格</p>
             </div>
           </div>
         </div>
@@ -193,7 +198,7 @@
         </div>
         <div class="content">
           <p>
-            重庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，为专业专注的承接百度重庆重庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，重重庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，重庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，
+            重庆百润信息技术有限公司（简称：重庆百润）是拟成立的重庆网润科技（集团）有限公司为全面实现集团化运作，为专业专注的承接百度重庆中心而成立的专业化互联网营销服务公司。网润科技（集团）成立于1997年，是全国历史最悠久的互联网企业之一。2011年由渝中区政府作为重点企业引进入驻互联网园......
           </p>
         </div>
       </div>
@@ -294,10 +299,10 @@
       </div>
       <div class="from">
         <div class="input-row clear"><span class="tit">户型：</span> <input type="text" /></div>
-        <div class="input-row clear"><span class="tit">户型：</span> <input type="text" /></div>
-        <div class="input-row clear"><span class="tit">户型：</span> <input type="text" /></div>
-        <div class="input-row clear"><span class="tit">户型：</span> <input type="text" /></div>
-        <div class="input-content"><span class="tit">户型：</span> <textarea name="" id=""></textarea></div>
+        <div class="input-row clear"><span class="tit">面积：</span> <input type="text" /></div>
+        <div class="input-row clear"><span class="tit">预算：</span> <input type="text" /></div>
+        <div class="input-row clear"><span class="tit">手机：</span> <input type="text" /></div>
+        <div class="input-content"><span class="tit">备注：</span> <textarea name="" id=""></textarea></div>
         <div class="btn"><a href="">点击提交</a></div>
       </div>
       <div class="copy">
@@ -305,7 +310,7 @@
           <img src="images/tel.png" alt="" />
           <div class="text">
             <p class="tit">全国咨询热线：</p>
-            <p class="tel-num">023-5555555</p>
+            <p class="tel-num">023-55555555</p>
           </div>
         </div>
         <div class="search">
@@ -313,7 +318,7 @@
           <a href="" class="icon"><img src="images/bsearch.png" alt=""/></a>
         </div>
         <div class="copyright">
-          <p>版权所有Copyright © 2005-2019 All rights reserved</p>
+          <p>版权所有COPYRIGHT © 2005-2019 ALL RIGHTS RESERVED</p>
           <p>沪ICP备13002314号</p>
         </div>
       </div>
@@ -340,6 +345,13 @@
 
     <!-- /caseshow -->
     <script src="https://cdn.staticfile.org/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+      /** home-swiper */
+      var mySwiper = new Swiper(".swiper-container", {
+        direction: "horizontal", // 水平切换选项
+        loop: true
+      });
+    </script>
     <script src="js/index.js"></script>
   </body>
 </html>

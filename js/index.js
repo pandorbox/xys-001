@@ -45,12 +45,6 @@ $(function() {
     $(".m-nav")
       .stop()
       .slideToggle();
-    $(".m-nav>li").click(function() {
-      $(this)
-        .find(".sub-nav")
-        .stop()
-        .slideToggle();
-    });
   });
   $(".m-nav>li").each(function(ind, el) {
     if ($(el).find(".sub-nav li").length > 0) {
@@ -250,8 +244,8 @@ $(function() {
       }
     });
   }
-  /** 取消active */
-  $(".ractive").hover(function() {
+  /** 变化active */
+  $(".hactive").hover(function() {
     $(this)
       .find(".active")
       .removeClass("active");
