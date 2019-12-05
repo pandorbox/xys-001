@@ -244,10 +244,95 @@ $(function() {
       }
     });
   }
-  /** 变化active */
-  $(".hactive").hover(function() {
-    $(this)
-      .find(".active")
-      .removeClass("active");
+  /** case */
+  // 切换active
+  $(".case-list-one").hover(function() {
+    if ($(this).hasClass(".active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+    }
+    switchImg();
+    switchText();
+    // let index = $(this).index();
+    // $(".stack-one-item").removeClass("active");
+    // $(".stack-one .stack-one-item")
+    //   .eq(index)
+    //   .addClass("active");
+  });
+  // 跟换内容
+  function switchText() {
+    let that = $(".case-list>.active");
+    let index = that.prevAll().length;
+    $(".stack-one-item").removeClass("active");
+    $(".stack-one .stack-one-item")
+      .eq(index)
+      .addClass("active");
+  }
+  // 左右切换图片
+  $(".switch").click(function() {
+    let that = $(".case-list>.active");
+    let last = that.prev();
+    let next = that.next();
+    if ($(this).hasClass("switch-left")) {
+      if (last.length > 0) {
+        that.removeClass("active");
+        last.addClass("active");
+        if (that.prevAll().length > 3) {
+          let num = (that.prevAll().length - 4) * 20;
+          $(".case-list-one").css({
+            left: "-" + num + "%"
+          });
+        } else {
+          $(".case-list-one").css({
+            left: "0"
+          });
+        }
+      } else {
+        alert("到顶了！");
+      }
+    } else {
+      if (next.length > 0) {
+        that.removeClass("active");
+        next.addClass("active");
+        if (that.prevAll().length > 3) {
+          let num = (that.prevAll().length - 3) * 20.1;
+          $(".case-list-one").css({
+            left: "-" + num + "%"
+          });
+        }
+      } else {
+        that.removeClass("active");
+        $(".case-list .case-list-one")
+          .first()
+          .addClass("active");
+        $(".case-list-one").css({
+          left: "0"
+        });
+      }
+    }
+    switchImg();
+    switchText();
+  });
+  // 更新图片url
+  function switchImg() {
+    let imgurl = "";
+    imgurl = $(".case-list>.active>img").attr("src");
+    $(".showimg").attr("src", imgurl);
+  }
+  switchImg();
+  /** design */
+  $(".design-list-img").hover(function() {
+    if ($(this).hasClass(".active")) {
+      $(this).removeClass("active");
+    } else {
+      $(this)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+    }
   });
 });

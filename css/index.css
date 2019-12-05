@@ -168,12 +168,15 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: #f5f5f5;
   height: 1.5rem;
+  position: relative;
 }
 .apply .text {
-  width: 16.5%;
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  letter-spacing: 0.02rem;
   display: flex;
   flex-direction: column;
   word-wrap: none;
@@ -202,16 +205,17 @@ body {
   white-space: nowrap;
 }
 .apply .input {
-  width: 68%;
+  width: 72%;
   display: flex;
-  justify-content: space-around;
+  padding-left: 0.5rem;
 }
 .apply .input input {
   border: none;
   height: 0.55rem;
   line-height: 0.55rem;
   font-size: 0.18rem;
-  padding-left: 0.1rem;
+  padding-left: 0.2rem;
+  margin-left: 0.2rem;
   background-color: #ffffff;
 }
 .apply .input .one {
@@ -229,6 +233,8 @@ body {
   font-size: 0.18rem;
 }
 .apply .btn {
+  position: absolute;
+  right: 3.6%;
   width: 1.6rem;
   color: #ffffff;
   line-height: 0.55rem;
@@ -297,7 +303,7 @@ body {
   width: 100%;
   position: relative;
 }
-.case .detail .detail-img {
+.case .detail img {
   width: 74%;
 }
 .case .detail .stack {
@@ -312,12 +318,18 @@ body {
 .case .detail .stack .stack-one {
   width: 90%;
   height: 65%;
-  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #f5f5f5;
+}
+.case .detail .stack .stack-one .stack-one-item {
+  display: none;
   padding-left: 1.3rem;
   padding-bottom: 0.2rem;
+}
+.case .detail .stack .stack-one .stack-one-item.active {
+  display: block;
 }
 .case .detail .stack .stack-one .tit {
   width: fit-content;
@@ -330,12 +342,15 @@ body {
   border-bottom: 2px solid #d78d20;
 }
 .case .detail .stack .stack-one .subtit {
-  width: 82%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 0.22rem;
   margin-top: 0.24rem;
   margin-bottom: 0.27rem;
+}
+.case .detail .stack .stack-one .subtit p {
+  margin-right: 6%;
 }
 .case .detail .stack .stack-one .content {
   width: 90%;
@@ -367,6 +382,9 @@ body {
   height: 0.86rem;
   text-align: center;
   line-height: 0.86rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #aaa8a5;
 }
 .case .detail .stack .stack-thr .btn img {
@@ -379,12 +397,16 @@ body {
   width: 100%;
   background-color: #d78d20;
   padding: 0.1rem;
+  overflow: hidden;
+  flex-wrap: nowrap;
   display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 .case .case-list .case-list-one {
   width: 19.5%;
   position: relative;
+  flex-shrink: 0;
+  margin-right: 0.65%;
 }
 .case .case-list .case-list-one img {
   width: 100%;
@@ -575,6 +597,35 @@ body {
   top: 0;
   opacity: 0;
 }
+.design .design-list .active:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 95%;
+  border: 4px solid #d78d20;
+  left: 10%;
+  top: 5%;
+}
+.design .design-list .active .img-box:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.design .design-list .active .text:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 /* /design */
 /* about */
 .about {
@@ -641,6 +692,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 0.2rem;
 }
 .about .tags .tag .tag-num {
   display: flex;
@@ -658,12 +710,13 @@ body {
   bottom: 0.07rem;
 }
 .about .tags .tag .text {
-  line-height: 0.5rem;
+  padding-top: 0.15rem;
   font-size: 0.18rem;
+  line-height: 0.18rem;
   color: #666666;
   border-top: 1px solid #cfcfcf;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
 .about .tags .more {
   position: absolute;
@@ -871,6 +924,7 @@ body {
   width: 38%;
 }
 .bottom .from {
+  margin-left: 0.2rem;
   width: 39%;
 }
 .bottom .from .input-row {
@@ -1016,26 +1070,8 @@ body {
     width: 16%;
   }
   /* bottom */
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .bottom .company {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .bottom .from {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .bottom .copy {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 45%;
     margin-top: 0.5rem;
   }
   /* /bottom */
@@ -1058,11 +1094,22 @@ body {
   /* apply */
   .apply {
     flex-direction: column;
+    align-items: center;
+    height: 3rem;
+    padding-top: 0.5rem;
+  }
+  .apply .text {
+    width: 40%;
   }
   .apply .input {
     width: 100%;
+    padding-left: 0;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
+  }
+  .apply .btn {
+    bottom: 10%;
+    left: 40%;
   }
   /* /apply */
   /* case */
@@ -1083,17 +1130,22 @@ body {
   .case .case-header .case-nav li {
     margin-left: 0.1rem;
   }
+  .case .case-header .case-nav li.active:after {
+    display: none;
+  }
   .case .detail {
     width: 100%;
     position: relative;
   }
-  .case .detail .detail-img {
+  .case .detail img {
+    float: left;
     width: 100%;
   }
   .case .detail .stack {
+    float: left;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
     display: flex;
@@ -1101,12 +1153,24 @@ body {
   }
   .case .detail .stack .stack-one {
     padding-top: 2%;
+    width: 100%;
+    height: 95%;
+  }
+  .case .detail .stack .stack-one .stack-one-item {
+    width: 95%;
+  }
+  .case .detail .stack .stack-two {
+    height: 95%;
+  }
+  .case .detail .stack .stack-thr .btn {
+    width: 0.86rem;
+    height: 0.86rem;
   }
   .case .case-list {
     margin-top: 0.2rem;
   }
-  .case .case-list .item {
-    width: 100%;
+  .case .case-list .case-list-one {
+    margin-right: 0.8%;
   }
   /* design */
   .design .design-header .tit {
@@ -1137,14 +1201,14 @@ body {
   }
   .about .left .tit {
     padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
+    height: 1rem;
   }
   .about .right {
     width: 50%;
   }
   .about .tags {
     height: 30%;
-    width: 75%;
+    width: 70%;
     left: 0.3rem;
     padding-left: 0.1rem;
   }
@@ -1152,6 +1216,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .about .tags .tag .tit {
+    font-size: 0.25rem;
   }
   .about .tags .more {
     width: 115%;
@@ -1161,6 +1228,10 @@ body {
     width: 100%;
     padding-bottom: 2rem;
   }
+  .news .news-header {
+    display: flex;
+    flex-direction: column;
+  }
   .news .news-header .tit {
     height: 1rem;
   }
@@ -1169,7 +1240,18 @@ body {
     text-align: left;
   }
   .news .news-header .news-nav {
-    height: 1rem;
+    width: 100%;
+    float: none;
+    display: flex;
+    display: block;
+    flex-direction: row;
+    line-height: 1rem;
+  }
+  .news .news-header .news-nav li {
+    float: right;
+  }
+  .news .news-header .news-nav li.active:after {
+    display: none;
   }
   .news .news-list {
     margin-top: 0.2rem;
