@@ -67,6 +67,9 @@ textarea,
 select {
   font-family: "Microsoft YaHei";
 }
+.hands {
+  cursor: pointer;
+}
 .nav-tit {
   cursor: pointer;
 }
@@ -109,6 +112,7 @@ textarea::-webkit-input-placeholder {
   font-weight: bold;
   font-size: 0.14rem;
 }
+
 .m-page {
   width: 100%;
   text-align: center;

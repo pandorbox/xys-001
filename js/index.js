@@ -195,7 +195,5 @@ $(function() {
         .siblings()
         .removeClass("active");
     }
-    switchImg();
-    switchText();
   });
 });
