@@ -8,7 +8,7 @@
     <meta name="author" content="QJK" />
     <title>首页</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="https://cdn.staticfile.org/Swiper/4.5.0/css/swiper.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
   </head>
@@ -42,8 +42,8 @@
       <div class="m-icon"></div>
     </div>
     <!-- banner -->
-    <div class="home-swiper container clear">
-      <div class="swiper-container">
+    <div class="banner container clear">
+      <div class="banner-swiper swiper-container">
         <div class="swiper-wrapper ">
           <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
           <div class="swiper-slide"><img src="images/banner.png" alt="" /></div>
@@ -55,14 +55,14 @@
     <!-- apply -->
     <div class="apply container clear">
       <div class="text">
-        <div class="tit">申请全屋免费设计</div>
-        <div class="subtit">一 对 一 私 人 定 制</div>
+        <p class="tit">申请全屋免费设计</p>
+        <p class="subtit">一 对 一 私 人 定 制</p>
       </div>
       <div class="input clear">
         <input type="text" class="one" placeholder="您的称呼" /> <input type="text" class="two" placeholder="联系电话" />
         <input type="text" class="thr" placeholder="小区名称" />
       </div>
-      <div class="btn">立即申请</div>
+      <div class="btn"><a href="">立即申请</a></div>
     </div>
     <!-- /apply -->
     <!-- caseshow -->
@@ -73,13 +73,13 @@
           <p class="tit-en">CASE SHOW</p>
           <p class="tit-zn">案例展示</p>
         </div>
-        <ul class="case-nav clear">
-          <li><a href="#">地中海风格</a></li>
-          <li class="active"><a href="#">北欧风格</a></li>
-          <li><a href="#">简欧风格</a></li>
-          <li><a href="#">中式风格</a></li>
-          <li><a href="#">美式风格</a></li>
-          <li><a href="#">工装风格</a></li>
+        <ul class="case-nav nav-tit clear">
+          <li>地中海风格</li>
+          <li class="active">北欧风格</li>
+          <li>简欧风格</li>
+          <li>中式风格</li>
+          <li>美式风格</li>
+          <li>工装风格</li>
         </ul>
       </div>
       <!-- 案例详情 -->
@@ -88,7 +88,7 @@
         <div class="stack">
           <div class="stack-one">
             <div class="stack-one-item ">
-              <p class="tit">花园小区1</p>
+              <p class="tit">花园小区</p>
               <div class="subtit">
                 <p>设计师：唐老鸭</p>
                 <p>面积：100m²</p>
@@ -99,7 +99,18 @@
               </p>
             </div>
             <div class="stack-one-item active ">
-              <p class="tit">花园小区2</p>
+              <p class="tit">桃园小区</p>
+              <div class="subtit">
+                <p>设计师：米老鼠</p>
+                <p>面积：100m²</p>
+                <p>风格：北欧风格</p>
+              </div>
+              <p class="content">
+                北欧风格起源于斯堪的那维亚地区的设计风格，因此也被称为“斯堪的纳维亚风格，北欧风格是指欧洲北部国家挪威、丹麦、瑞典、芬兰及冰岛等国的艺术设计风格（主要指室内设计以及工业产品设计），”。具有简约、自然、人性化的特点。
+              </p>
+            </div>
+            <div class="stack-one-item ">
+              <p class="tit">香山花园</p>
               <div class="subtit">
                 <p>设计师：唐老鸭</p>
                 <p>面积：100m²</p>
@@ -110,7 +121,7 @@
               </p>
             </div>
             <div class="stack-one-item ">
-              <p class="tit">花园小区3</p>
+              <p class="tit">书香别苑</p>
               <div class="subtit">
                 <p>设计师：唐老鸭</p>
                 <p>面积：100m²</p>
@@ -121,7 +132,7 @@
               </p>
             </div>
             <div class="stack-one-item ">
-              <p class="tit">花园小区4</p>
+              <p class="tit">港田小区</p>
               <div class="subtit">
                 <p>设计师：唐老鸭</p>
                 <p>面积：100m²</p>
@@ -146,9 +157,6 @@
         <div class="case-list-one"><img class="case-list-img" src="images/case-one.png" alt="" /></div>
         <div class="case-list-one"><img class="case-list-img" src="images/case-two.png" alt="" /></div>
         <div class="case-list-one"><img class="case-list-img" src="images/case-one.png" alt="" /></div>
-        <div class="case-list-one"><img class="case-list-img" src="images/case-two.png" alt="" /></div>
-        <div class="case-list-one"><img class="case-list-img" src="images/case-one.png" alt="" /></div>
-        <div class="case-list-one"><img class="case-list-img" src="images/case-two.png" alt="" /></div>
       </div>
     </div>
     <!-- /caseshow -->
@@ -160,67 +168,83 @@
           <p class="tit-en">DESIGN TEAM</p>
           <p class="tit-zn">设计团队</p>
         </div>
-        <ul class="design-nav clear">
-          <li><a href="#">全部设计师</a></li>
-          <li class="active"><a href="#">资深设计师</a></li>
-          <li><a href="#">优秀设计师</a></li>
+        <ul class="design-nav nav-tit clear">
+          <li>全部设计师</li>
+          <li class="active">资深设计师</li>
+          <li>优秀设计师</li>
         </ul>
       </div>
       <!-- 设计师列表 -->
-      <div class="design-list clear">
-        <div class="design-list-img  ">
-          <div class="img-box "><img src="images/design-one.png" alt="" /></div>
-          <div class="text">
-            <div class="tit">
-              <p class="name">唐老鸭</p>
-              <p class="position">/资深设计师</p>
-            </div>
-            <p class="year">工作：6年</p>
-            <div class="lines">
-              <p class="tit">擅长：</p>
-              <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
-            </div>
-          </div>
-        </div>
-        <div class="design-list-img active ">
-          <div class="img-box "><img src="images/design-two.png" alt="" /></div>
-          <div class="text">
-            <div class="tit">
-              <p class="name">唐老鸭</p>
-              <p class="position">/资深设计师</p>
-            </div>
-            <p>工作：6年</p>
-            <div class="lines">
-              <p class="tit">擅长：</p>
-              <p class="content">空间合理利用，各种风格空间合理利用，用各种风格</p>
+      <div class="swiper-container design-list">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide active">
+            <div class="img-box "><img src="images/design-one.png" alt="" /></div>
+            <div class="text">
+              <div class="tit">
+                <p class="name">唐老鸭</p>
+                <p class="position">/资深设计师</p>
+              </div>
+              <p class="year">工作：6年</p>
+              <div class="lines">
+                <p class="tit">擅长：</p>
+                <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="design-list-img  ">
-          <div class="img-box "><img src="images/design-thr.png" alt="" /></div>
-          <div class="text">
-            <div class="tit">
-              <p class="name">唐老鸭</p>
-              <p class="position">/资深设计师</p>
-            </div>
-            <p>工作：6年</p>
-            <div class="lines">
-              <p class="tit">擅长：</p>
-              <p class="content">空间合理利用，各种风格空间合理利用，用各种风格</p>
+          <div class="swiper-slide">
+            <div class="img-box "><img src="images/design-two.png" alt="" /></div>
+            <div class="text">
+              <div class="tit">
+                <p class="name">米老鼠</p>
+                <p class="position">/资深设计师</p>
+              </div>
+              <p class="year">工作：6年</p>
+              <div class="lines">
+                <p class="tit">擅长：</p>
+                <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="design-list-img">
-          <div class="img-box "><img src="images/design-fou.png" alt="" /></div>
-          <div class="text">
-            <div class="tit">
-              <p class="name">唐老鸭</p>
-              <p class="position">/资深设计师</p>
+          <div class="swiper-slide">
+            <div class="img-box "><img src="images/design-thr.png" alt="" /></div>
+            <div class="text">
+              <div class="tit">
+                <p class="name">张晓晓</p>
+                <p class="position">/资深设计师</p>
+              </div>
+              <p class="year">工作：6年</p>
+              <div class="lines">
+                <p class="tit">擅长：</p>
+                <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
+              </div>
             </div>
-            <p>工作：6年</p>
-            <div class="lines">
-              <p class="tit">擅长：</p>
-              <p class="content">空间合理利用，各种风格空间合理利用，用各种风格</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-box "><img src="images/design-fou.png" alt="" /></div>
+            <div class="text">
+              <div class="tit">
+                <p class="name">王花花</p>
+                <p class="position">/资深设计师</p>
+              </div>
+              <p class="year">工作：6年</p>
+              <div class="lines">
+                <p class="tit">擅长：</p>
+                <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-box "><img src="images/design-one.png" alt="" /></div>
+            <div class="text">
+              <div class="tit">
+                <p class="name">唐老鸭</p>
+                <p class="position">/资深设计师</p>
+              </div>
+              <p class="year">工作：6年</p>
+              <div class="lines">
+                <p class="tit">擅长：</p>
+                <div class="content">空间合理利用，各种风格空间合理利用，用各种风格</div>
+              </div>
             </div>
           </div>
         </div>
@@ -261,7 +285,7 @@
             <p class="num">80</p>
             <p class="mark">+</p>
           </div>
-          <div class="text">拥有80名资深设计师</div>
+          <div class="text">拥有80余名资深设计师</div>
         </div>
         <div class="more">
           <div class="btn"><a href="">查看更多</a></div>
@@ -270,23 +294,23 @@
     </div>
     <!-- /about -->
     <!-- news -->
-    <div class="news container clear">
+    <div class="news container nav-tit clear">
       <!-- 新闻头部 -->
       <div class="news-header clear">
         <div class="tit clear">
           <p class="tit-en">NEWS</p>
           <p class="tit-zn">新闻动态</p>
         </div>
-        <ul class="news-nav clear">
-          <li><a href="#">公司新闻</a></li>
-          <li class="active"><a href="#">行业新闻</a></li>
-          <li><a href="#">装修小知识</a></li>
+        <ul class="news-nav nav-tit clear">
+          <li>公司新闻</li>
+          <li class="active">行业新闻</li>
+          <li>装修小知识</li>
         </ul>
       </div>
       <!-- 新闻列表 -->
       <div class="news-list clear">
         <div class="item clear">
-          <img src="images/news.png" alt="" />
+          <img src="images/news-one.png" alt="" />
           <div class="text">
             <p class="tit">酒店改造建议有哪些？</p>
             <p class="subtit">2019-09-18</p>
@@ -295,7 +319,7 @@
           <div class="more"><a href="">查看更多</a></div>
         </div>
         <div class="item clear">
-          <img src="images/news.png" alt="" />
+          <img src="images/news-two.png" alt="" />
           <div class="text">
             <p class="tit">酒店改造建议有哪些？</p>
             <p class="subtit">2019-09-18</p>
@@ -304,7 +328,7 @@
           <div class="more"><a href="">查看更多</a></div>
         </div>
         <div class="item clear">
-          <img src="images/news.png" alt="" />
+          <img src="images/news-thr.png" alt="" />
           <div class="text">
             <p class="tit">酒店改造建议有哪些？</p>
             <p class="subtit">2019-09-18</p>
@@ -313,7 +337,7 @@
           <div class="more"><a href="">查看更多</a></div>
         </div>
         <div class="item clear">
-          <img src="images/news.png" alt="" />
+          <img src="images/news-one.png" alt="" />
           <div class="text">
             <p class="tit">酒店改造建议有哪些？</p>
             <p class="subtit">2019-09-18</p>
@@ -382,14 +406,7 @@
     <!-- /bottom -->
 
     <!-- /caseshow -->
-    <script src="https://cdn.staticfile.org/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      /** home-swiper */
-      var mySwiper = new Swiper(".swiper-container", {
-        direction: "horizontal", // 水平切换选项
-        loop: true
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

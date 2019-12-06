@@ -67,6 +67,9 @@ textarea,
 select {
   font-family: "Microsoft YaHei";
 }
+.nav-tit {
+  cursor: pointer;
+}
 .none {
   display: none;
 }
