@@ -94,22 +94,23 @@ $(function() {
     loop: true
   });
   /** case */
+  // 列表滑动
+  var caseSwiper = new Swiper(".case-list", {
+    slidesPerView: 5,
+    spaceBetween: 10
+  });
   // 切换active
-  $(".case-list-one").hover(function() {
-    if ($(this).hasClass(".active")) {
-      $(this).removeClass("active");
-    } else {
-      $(this)
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
-    }
+  $(".case-list>.swiper-wrapper>.swiper-slide").hover(function() {
+    $(this)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
     switchImg();
     switchText();
   });
   // 更换内容
   function switchText() {
-    let that = $(".case-list>.active");
+    let that = $(".case-list>.swiper-wrapper>.active");
     let index = that.prevAll().length;
     $(".stack-one-item").removeClass("active");
     $(".stack-one .stack-one-item")
@@ -118,7 +119,7 @@ $(function() {
   }
   // 左右切换图片
   $(".switch").click(function() {
-    let that = $(".case-list>.active");
+    let that = $(".case-list>.swiper-wrapper>.active");
     let last = that.prev();
     let next = that.next();
     if ($(this).hasClass("switch-left")) {
@@ -150,7 +151,7 @@ $(function() {
         }
       } else {
         that.removeClass("active");
-        $(".case-list .case-list-one")
+        $(".case-list>.swiper-wrapper .swiper-slide")
           .first()
           .addClass("active");
         $(".case-list-one").css({
@@ -164,22 +165,11 @@ $(function() {
   // 更新图片url
   function switchImg() {
     let imgurl = "";
-    imgurl = $(".case-list>.active>img").attr("src");
+    imgurl = $(".case-list>.swiper-wrapper>.active>img").attr("src");
     $(".showimg").attr("src", imgurl);
   }
   switchImg();
   /** design */
-  // active
-  $(".design-list-img").hover(function() {
-    if ($(this).hasClass(".active")) {
-      $(this).removeClass("active");
-    } else {
-      $(this)
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
-    }
-  });
   // 列表滑动
   var desSwiper = new Swiper(".design-list", {
     slidesPerView: 4,
@@ -187,13 +177,18 @@ $(function() {
   });
   // 切换active
   $(".design-list>.swiper-wrapper>.swiper-slide").hover(function() {
-    if ($(this).hasClass(".active")) {
-      $(this).removeClass("active");
-    } else {
-      $(this)
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
-    }
+    $(this)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
   });
+  // border动画
+  function appendDiv() {
+    var left = "<div class='border-left'></div>";
+    let bottom = "<div class='border-bottom' ></div>";
+    let right = "<div class='border-right'></div>";
+    let top = "<div class='border-top' ></div>";
+    $(".design-list>.swiper-wrapper>.swiper-slide").append(left, bottom, right, top);
+  }
+  appendDiv();
 });
