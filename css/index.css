@@ -1175,6 +1175,7 @@ body {
   }
   .header .search {
     width: 40%;
+    margin-right: 0.5rem;
   }
   .header .nav {
     display: none;
@@ -1184,37 +1185,50 @@ body {
   .apply {
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     height: 3rem;
-    padding-top: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
   .apply .text {
     width: 40%;
   }
   .apply .input {
+    margin-left: 0;
     width: 100%;
     padding-left: 0;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .apply .input input {
+    width: 30% !important;
+    margin-left: 0;
   }
   .apply .btn {
-    bottom: 10%;
-    left: 40%;
+    position: relative;
+    right: 0;
   }
   /* /apply */
   /* case */
   .case {
     width: 100%;
-    padding-bottom: 0.5rem;
+    padding-top: 0.2rem;
+  }
+  .case .case-header {
+    height: 2rem;
   }
   .case .case-header .tit {
-    height: 1rem;
+    height: 1.5rem;
   }
   .case .case-header .tit .tit-zn {
     color: #d78d20;
     text-align: left;
   }
   .case .case-header .case-nav {
-    height: 1rem;
+    height: 0.5rem;
+    margin-bottom: 0.3rem;
   }
   .case .case-header .case-nav li {
     margin-left: 0.1rem;
@@ -1255,25 +1269,30 @@ body {
     width: 0.86rem;
     height: 0.86rem;
   }
-  .case .case-list {
-    margin-top: 0.2rem;
-  }
   .case .case-list .case-list-one {
     margin-right: 0.8%;
   }
   /* design */
+  .design {
+    padding-top: 0.2rem;
+  }
   .design .design-header .tit {
-    height: 1rem;
+    height: 1.5rem;
   }
   .design .design-header .tit .tit-zn {
     color: #d78d20;
     text-align: left;
   }
   .design .design-header .design-nav {
-    height: 1rem;
+    margin-bottom: 0.3rem;
+    height: 0.5rem;
+  }
+  .design .design-header .design-nav li.active:after {
+    display: none;
   }
   .design .design-list {
     width: 100%;
+    margin-bottom: 0;
   }
   .design .design-list .design-list-img {
     margin-bottom: 0.2rem;
@@ -1282,7 +1301,7 @@ body {
   /* /design */
   /* about */
   .about {
-    margin-top: 0;
+    margin-top: 0.3rem;
     padding-bottom: 2rem;
   }
   .about .left {
@@ -1290,7 +1309,7 @@ body {
   }
   .about .left .tit {
     padding-top: 0.1rem;
-    height: 1rem;
+    height: 1.5rem;
   }
   .about .right {
     width: 50%;
@@ -1300,6 +1319,7 @@ body {
     width: 70%;
     left: 0.3rem;
     padding-left: 0.1rem;
+    bottom: 10%;
   }
   .about .tags .tag {
     display: flex;
@@ -1311,18 +1331,29 @@ body {
   }
   .about .tags .more {
     width: 115%;
+    border: 3px solid #d78d20;
+    border-left-width: 2px;
+    border-right-width: 2px;
+  }
+  .about .tags .more .btn {
+    width: 1.2rem;
+    height: 40%;
+    top: 30%;
+    right: -0.8rem;
   }
   /* news */
   .news {
+    padding-top: 0.2rem;
     width: 100%;
     padding-bottom: 2rem;
   }
   .news .news-header {
     display: flex;
     flex-direction: column;
+    height: 2rem;
   }
   .news .news-header .tit {
-    height: 1rem;
+    height: 1.5rem;
   }
   .news .news-header .tit .tit-zn {
     color: #d78d20;
@@ -1334,7 +1365,7 @@ body {
     display: flex;
     display: block;
     flex-direction: row;
-    line-height: 1rem;
+    height: 0.5rem;
   }
   .news .news-header .news-nav li {
     float: right;
@@ -1347,6 +1378,7 @@ body {
   }
   .news .news-list .item {
     width: 47%;
+    margin-bottom: 0.1rem;
   }
   /* bottom */
   .bottom {

@@ -95,10 +95,23 @@ $(function() {
   });
   /** case */
   // 列表滑动
-  var caseSwiper = new Swiper(".case-list", {
-    slidesPerView: 5,
-    spaceBetween: 10
-  });
+  var resultWAP = window.matchMedia("(max-width:768px)");
+  function caseSwiper() {
+    if (resultWAP.matches) {
+      // 768以下滑动显示三个*/
+      var caseSwiper = new Swiper(".case-list", {
+        slidesPerView: 3,
+        spaceBetween: 5
+      });
+    } else {
+      // pc滑动显示5个
+      var caseSwiper = new Swiper(".case-list", {
+        slidesPerView: 5,
+        spaceBetween: 10
+      });
+    }
+  }
+  caseSwiper();
   // 切换active
   $(".case-list>.swiper-wrapper>.swiper-slide").hover(function() {
     $(this)
@@ -162,6 +175,7 @@ $(function() {
     switchImg();
     switchText();
   });
+
   // 更新图片url
   function switchImg() {
     let imgurl = "";
@@ -171,10 +185,22 @@ $(function() {
   switchImg();
   /** design */
   // 列表滑动
-  var desSwiper = new Swiper(".design-list", {
-    slidesPerView: 4,
-    spaceBetween: 0
-  });
+  function desSwiper() {
+    if (resultWAP.matches) {
+      // 手机显示2张
+      var desSwiper = new Swiper(".design-list", {
+        slidesPerView: 2,
+        spaceBetween: 0
+      });
+    } else {
+      // pc显示4张
+      var desSwiper = new Swiper(".design-list", {
+        slidesPerView: 4,
+        spaceBetween: 0
+      });
+    }
+  }
+  desSwiper();
   // 切换active
   $(".design-list>.swiper-wrapper>.swiper-slide").hover(function() {
     $(this)
